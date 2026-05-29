@@ -1,0 +1,33 @@
+body{
+    background:#111;
+    color:white;
+    font-family:Arial;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.contenedor{
+    background:#222;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    width:350px;
+}
+
+input,
+button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+button{
+    background:cyan;
+    cursor:pointer;
+}

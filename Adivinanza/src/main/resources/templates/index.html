@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Adivina el Número</title>
+
+    <link rel="stylesheet" th:href="@{/style.css}">
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Adivina el Número</h1>
+
+        <p>Debes adivinar un número entre 1 y 100</p>
+
+        <form action="/adivinar" method="post" th:object="${juego}">
+
+            <input type="number"
+                   th:field="*{numero}"
+                   placeholder="Escribe un número">
+
+            <button type="submit">
+                Adivinar
+            </button>
+
+        </form>
+
+        <div th:if="${juego.mensaje != null}">
+            <h2 th:text="${juego.mensaje}"></h2>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
